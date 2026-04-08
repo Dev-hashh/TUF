@@ -1,16 +1,80 @@
-# React + Vite
+# TUF Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Vite single-page wall calendar application with month-based visuals, date-range selection, holiday markers, inline notes, and a light/dark theme toggle.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Monthly wall calendar layout with hero imagery for each month
+- Previous and next month navigation with transition effects
+- Date range selection by clicking a start and end date
+- Visual highlighting for today, weekends, selected ranges, and holidays
+- Notes area that updates based on the selected month or date range
+- Light and dark theme toggle
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite 8
+- ESLint 9
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js 18 or newer
+- npm
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start the development server
+
+```bash
+npm run dev
+```
+
+By default, Vite will print the local development URL in the terminal.
+
+## Available Scripts
+
+- `npm run dev` starts the Vite development server
+- `npm run build` creates a production build in `dist/`
+- `npm run preview` serves the production build locally
+- `npm run lint` runs ESLint across the project
+
+## Project Structure
+
+```text
+.
+|-- public/
+|   |-- favicon.svg
+|   `-- icons.svg
+|-- src/
+|   |-- App.jsx
+|   |-- App.css
+|   |-- Calender.jsx
+|   |-- calendar.css
+|   |-- index.css
+|   |-- main.jsx
+|   `-- assets/
+|-- index.html
+|-- package.json
+`-- vite.config.js
+```
+
+## Notes
+
+- The main UI is rendered from `src/Calender.jsx`.
+- The component currently includes a predefined holiday list and month image URLs directly in the source.
+- Notes are stored in component state, so they reset when the page reloads.
+
+## Build
+
+To generate the production bundle:
+
+```bash
+npm run build
+```
